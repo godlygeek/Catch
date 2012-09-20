@@ -1,5 +1,5 @@
 /*
- *  Generated: 2012-09-17 01:41:39.049891
+ *  Generated: 2012-09-20 01:14:52.819117
  *  ----------------------------------------------------------
  *  This file has been merged from multiple headers. Please don't edit it directly
  *  Copyright (c) 2012 Two Blue Cubes Ltd. All rights reserved.
@@ -2011,6 +2011,9 @@ namespace Catch
         std::ostream& stream;
         bool includeSuccessfulResults;
         ConfigData fullConfig;
+
+        private:
+            const ReporterConfig& operator=( const ReporterConfig& );
     };
 
     class TestCaseInfo;
