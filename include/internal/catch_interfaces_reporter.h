@@ -35,6 +35,9 @@ namespace Catch
         std::ostream& stream;
         bool includeSuccessfulResults;
         ConfigData fullConfig;
+
+        private:
+            const ReporterConfig& operator=( const ReporterConfig& );
     };
     
     class TestCaseInfo;
