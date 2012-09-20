@@ -218,6 +218,10 @@ TEST_CASE(  "./succeeding/conditions/int literals",
 #pragma GCC diagnostic ignored "-Wsign-compare"
 #pragma GCC diagnostic ignored "-Wsign-conversion"
 #endif
+#ifdef _MSC_VER
+#pragma warning( push )
+#pragma warning( disable : 4389 )
+#endif
 
 TEST_CASE(  "./succeeding/conditions//long_to_unsigned_x",
             "comparisons between int variables" )
@@ -265,6 +269,9 @@ TEST_CASE(  "./succeeding/conditions/computed ints",
 
 #ifdef  __GNUC__
 #pragma GCC diagnostic pop
+#endif
+#ifdef _MSC_VER
+#pragma warning( pop )
 #endif
 
 inline const char* returnsConstNull(){ return NULL; }
